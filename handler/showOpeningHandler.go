@@ -6,6 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func DeleteOpeningHanlder(ctx *gin.Context) {
+func ShowOpeningHandler(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"message": "Opening endpoint"})
 }

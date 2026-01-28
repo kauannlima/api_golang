@@ -6,6 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func CreateOpeningHanlder(ctx *gin.Context) {
+func UpdateOpeningHandler(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{"message": "Opening endpoint"})
 }
