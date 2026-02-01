@@ -7,6 +7,17 @@ import (
 	"github.com/kauannlima/api_golang/schemas"
 )
 
+// @BasePath /api/v1
+// @Summary Show a job opening
+// @Description Show a job opening with the provided id
+// @Tags Opening
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening ID"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 	if id == "" {

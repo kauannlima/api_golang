@@ -7,6 +7,17 @@ import (
 	"github.com/kauannlima/api_golang/schemas"
 )
 
+// @BasePath /api/v1
+// @Summary Create a new job opening
+// @Description Create a new job opening with the provided details
+// @Tags Opening
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
 	request := CreateOpeningRequest{}
 
