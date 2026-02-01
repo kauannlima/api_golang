@@ -7,6 +7,17 @@ import (
 	"github.com/kauannlima/api_golang/schemas"
 )
 
+// @BasePath /api/v1
+// @Summary Update a job opening
+// @Description Update a job opening with the provided details
+// @Tags Opening
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening ID"
+// @Success 200 {object} UpdateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [update]
 func UpdateOpeningHandler(ctx *gin.Context) {
 	request := UpdateOpeningRequest{}
 

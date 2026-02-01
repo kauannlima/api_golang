@@ -7,6 +7,16 @@ import (
 	"github.com/kauannlima/api_golang/schemas"
 )
 
+// @BasePath /api/v1
+// @Summary List a job opening
+// @Description List all job openings in the database
+// @Tags Opening
+// @Accept json
+// @Produce json
+// @Success 200 {object} ListOpeningResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /openings [get]
+
 func ListOpeningHandler(ctx *gin.Context) {
 	openings := []schemas.Opening{}
 
